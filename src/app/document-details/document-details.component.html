@@ -1,0 +1,10 @@
+<div class="document-details-container">
+  <h2>Document Details</h2>
+  <div *ngIf="document">
+    <h3>Title: {{ document.title }}</h3>
+    <p>Content: {{ document.content }}</p>
+  </div>
+  <div *ngIf="!document">
+    <p>Document not found.</p>
+  </div>
+</div>

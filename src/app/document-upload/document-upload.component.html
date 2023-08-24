@@ -1,0 +1,13 @@
+<div class="document-upload-container" *ngIf="isAuthenticated">
+  <h2>Upload a Document</h2>
+  <form (submit)="uploadDocument($event)">
+    <input type="file" (change)="onFileChange($event)" />
+    <div *ngIf="selectedFile">
+      <p>Selected File: {{ selectedFile.name }}</p>
+    </div>
+    <div *ngIf="!selectedFile">
+      <p *ngIf="validationError">Validation Error: {{ validationError }}</p>
+    </div>
+    <button type="submit" [disabled]="!selectedFile">Upload</button>
+  </form>
+</div>

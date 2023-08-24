@@ -1,0 +1,9 @@
+<nav class="navigation-menu" *ngIf="isAuthenticated">
+  <ul>
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/upload">Upload Document</a></li>
+  </ul>
+  <div *ngIf="isAuthenticated">
+    <button (click)="logout()">Logout</button>
+  </div>
+</nav>
